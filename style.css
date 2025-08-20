@@ -1,0 +1,31 @@
+p {
+    color:#00ffff;
+    font-size: 24px;
+}
+
+em{
+    color:#4808C7;
+    font-size: 24px;
+}
+
+ol{
+    color:greenyellow;
+    font-size: 24px;
+}
+
+ul{
+    color:black;
+    font-size: 24px;
+}
+
+.estilo2{
+    color:#F1F051;
+    font-size: 24px;
+}
+
+/*ponerle alguna regla al div de ID*/
+#divEspecial{
+    background-color: #4808C7;
+    color:#A0C6F6;
+    font-size:24px;
+}
