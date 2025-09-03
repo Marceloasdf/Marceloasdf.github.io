@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <nav class="nav justify-content-center gap-4">
+        <a class="nav-link" href="#">Home</a>
+        <h1>GUAU&MIAU</h1>
+        <a class="nav-link" href="#">Iniciar Sesión</a>
+    </nav>
+</head>
+
+<body>
+    <form class="row g-3 needs-validation" novalidate id="Formulario">
+        <div class="col-md-4">
+            <label for="validationCustom01" class="form-label">Nombre Completo</label>
+            <input type="text" class="form-control" id="validationCustom01" required pattern="^[A-Za-z\s]+$"
+                maxlength="50">
+            <div class="invalid-feedback">
+                Solo se permiten Letras y Menos de 50 Caracteres
+            </div>
+        </div>
+        <!---parece aceptar otros dominios-->
+        <div class="col-md-4">
+            <label for="validationCustomUsername" class="form-label">Correo Electrónico</label>
+            <div class="input-group has-validation">
+                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                <input type="email" class="form-control" id="validationCustomUsername"
+                    aria-describedby="inputGroupPrepend" required>
+                <div class="invalid-feedback">
+                    Por favor, ingrese un correo válido con dominio @duoc.cl.
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4" id="Contraseña">
+            <label for="validationCustomUsername" class="form-label">Contraseña</label>
+            <div class="input-group has-validation">
+                <input type="text" class="form-control" id="validationCustomUsername"
+                    aria-describedby="inputGroupPrepend" required
+                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%&*!^])[A-Za-z\d@#$%&*!^]{8,}$">
+                <div class="invalid-feedback">
+                    La contraseña no cumple con los requisitos
+                    (debe tener almenos 8 caracteres,una Letra mayúscula, una Minúscula, un numero, y un caracter
+                    especial)
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4" id="ConfirmarContraseña">
+            <label for="validationCustomUsername" class="form-label">Contraseña</label>
+            <div class="input-group has-validation">
+                <input type="text" class="form-control" id="validationCustomUsername"
+                    aria-describedby="inputGroupPrepend" required
+                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%&*!^])[A-Za-z\d@#$%&*!^]{8,}$">
+                <div class="invalid-feedback">
+                    La contraseña no cumple con los requisitos
+                    (debe tener almenos 8 caracteres,una Letra mayúscula, una Minúscula, un numero, y un caracter
+                    especial)
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4"> 
+            <label for="validationCustom01" class="form-label">Numero de telefono</label>
+             <input type="tel" class="form-control" id="validationCustom01">
+            <div class="invalid-feedback"> 
+                Ingrese un número de teléfono válido (7 a 15 dígitos, puede incluir +, espacios, guiones o paréntesis) </div>
+        </div>
+
+
+
+
+
+        <div class="col-12">
+            <button class="btn btn-primary" type="submit">Submit form</button>
+        </div>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <script src="assets/Actividad2.js"></script>
+
+
+
+</body>
+
+</html>
