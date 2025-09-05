@@ -9,22 +9,13 @@ function getData(form){
 
 }
 
-var contraseña=""
-var contraseñaConfirmada=""
-function checkPasswd(){
-
-    let user_Data=Object.fromEntries(formData);
-    console.log(user_Data)
-    contraseña=user_Data["Contraseña"]
-    contraseñaConfirmada=user_Data["ConfirmarContraseña"]
-    
-    if (contraseña==contraseñaConfirmada) {
-        return true
-    } else {
-        return false
-    }
-
+function checkPasswd() {
+    const contraseña = document.getElementById("Contraseña").value;
+    const contraseñaConfirmada = document.getElementById("ConfirmarContraseña").value;
+    return contraseña === contraseñaConfirmada;
 }
+
+
 function addform(){
     msg="<p>Hola</p>"
     document.getElementById("Formulario3").innerHTML+=msg;
@@ -40,13 +31,18 @@ function Bootstrap_Form() {
     // Loop over them and prevent submission
     Array.from(forms).forEach(form => {
         form.addEventListener('submit', event => {
-            if (form.checkValidity()) { console.log("aaa")
+            if (!form.checkValidity()) { 
                 event.preventDefault()
                 event.stopPropagation()
             }else{
-
                 event.preventDefault()
-                getData(event.target)
+                if (checkPasswd()) {
+                    console.log("Las contraseñas coinciden");
+                    getData(event.target)
+                } else {
+                    console.log("Las contraseñas no coinciden");
+                }
+                
             }
 
             form.classList.add('was-validated')
